@@ -1,0 +1,12 @@
+.App{
+    background-color: #b3b3b3; 
+    border: 5px solid #ffa500; 
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+
+    
+}

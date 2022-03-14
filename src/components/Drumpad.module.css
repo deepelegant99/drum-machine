@@ -1,5 +1,9 @@
-.Drumpad{
-    background-color: #adadad;
-    width: 270px;
-    height: 270px;
+.drumpad {
+  background-color: #adadad;
+  width: 270px;
+  height: 270px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }

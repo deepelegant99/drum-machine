@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "./Drumpad.module.css";
 import { useState, useEffect } from "react";
+import clip1 from "../Audio/cm.wav";
 
 const Drumpad = () => {
 
   //const [sound, setSound] = useState("");
-  const sound = document.getElementById("audio");
-  /*console.log(sound);
+  const sound = new Audio(clip1);
+  /*console.log(sound);*/
 
   function playSound(){
     sound.play();
-  }*/
+  }
 
   return (
     <div className={styles.drumpad}>

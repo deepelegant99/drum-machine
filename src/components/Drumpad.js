@@ -2,23 +2,41 @@ import React from "react";
 import styles from "./Drumpad.module.css";
 import { useState, useEffect } from "react";
 import clip1 from "../Audio/cm.wav";
+import clip2 from '../Audio/de.wav';
 
-const Drumpad = () => {
-
+const Drumpad = ({setDisplayname}) => {
   //const [sound, setSound] = useState("");
-  const sound = new Audio(clip1);
+
   /*console.log(sound);*/
 
-  function playSound(){
-    sound.play();
+  // function playSound(){
+  //   sound.play();
+  // }
+
+  const handlePlay = (event) => {
+    const value = event.target.value;
+
+    switch(value){
+      case 'land':
+        setDisplayname('land');
+        const sound1 = new Audio(clip1);
+        sound1.play();
+        break;
+      case 'air':
+        setDisplayname('air');
+        const sound2 = new Audio(clip2);
+        sound2.play();
+        break;
+    }
+
   }
 
   return (
     <div className={styles.drumpad}>
-      <button className="drum-pad" id="Q" onClick={playSound}>
+      <button className="drum-pad" id="Q" onClick={handlePlay} value="land">
         Q
       </button>
-      <button className="drum-pad" id="W" >
+      <button className="drum-pad" id="W" onClick={handlePlay} value='air'>
         W
       </button>
       <button className="drum-pad" id="E">
@@ -44,14 +62,6 @@ const Drumpad = () => {
       </button>
     </div>
   );
-
-    function playSound(){
-    sound.play();
-  }
-
-  console.log(sound);
-
-
 };
 
 export default Drumpad;

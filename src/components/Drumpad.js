@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Drumpad.module.css";
 import { useState, useEffect } from "react";
-import clip1 from "../Audio/cm.wav";
-import clip2 from '../Audio/de.wav';
+import clip1 from "../Media/big-thunder-with-rain.wav";
+import clip2 from "../Media/cinematic-alien-thunder-transition.wav";
 
 const Drumpad = ({setDisplayname}) => {
   //const [sound, setSound] = useState("");

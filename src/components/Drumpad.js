@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Drumpad.module.css";
 import { useState, useEffect } from "react";
 import clip1 from "../Media/big-thunder-with-rain.wav";
@@ -12,136 +12,42 @@ import clip8 from "../Media/thunder-in-bad-weather.wav";
 import clip9 from "../Media/thunderstorm-ambience.wav";
 
 const Drumpad = ({ setDisplayname }) => {
-  //const [sound, setSound] = useState("");
+  const sound = useRef(null); 
 
-  /*console.log(sound);*/
-
-  // function playSound(){
-  //   sound.play();
-  // }
-
-  const handlePlay = (event) => {
-    const value = event.target.value;
-
-    switch (value) {
-      case "big-thunder-with-rain":
-        setDisplayname("big thunder with rain");
-        const sound1 = new Audio(clip1);
-        sound1.play();
-        break;
-      case "cinematic-alien-thunder-transition":
-        setDisplayname("cinematic alien thunder transition");
-        const sound2 = new Audio(clip2);
-        sound2.play();
-        break;
-      case "cinematic-impact-thunder":
-        setDisplayname("cinematic impact thunder");
-        const sound3 = new Audio(clip3);
-        sound3.play();
-        break;
-      case "cinematic-laser-gun-thunder":
-        setDisplayname("cinematic laser gun thunder");
-        const sound4 = new Audio(clip4);
-        sound4.play();
-        break;
-      case "cinematic-thunder":
-        setDisplayname("cinematic thunder");
-        const sound5 = new Audio(clip5);
-        sound5.play();
-        break;
-      case "cinematic-transition-thunder":
-        setDisplayname("cinematic transition thunder");
-        const sound6 = new Audio(clip6);
-        sound6.play();
-        break;
-      case "light-rain-with-thunderstorm":
-        setDisplayname("light rain with thunderstorm");
-        const sound7 = new Audio(clip7);
-        sound7.play();
-        break;
-      case "thunder-in-bad-weather":
-        setDisplayname("thunder in bad weather");
-        const sound8 = new Audio(clip8);
-        sound8.play();
-        break;
-      case "thunderstorm-ambience":
-        setDisplayname("thunderstorm ambience");
-        const sound9 = new Audio(clip9);
-        sound9.play();
-        break;
-    }
-  };
+  const play = ()=>{
+    sound.current.currentTime=0;
+    sound.current.play();
+  }
 
   return (
     <div className={styles.drumpad}>
-      <button
-        className="drum-pad"
-        id="Q"
-        onClick={handlePlay}
-        value="big-thunder-with-rain"
-      >
-        Q
+      <>
+        <audio src={clip1} ref={sound} id='Q'></audio>
+        <button onClick={play}>Q</button>
+      </>
+     
+      <button className="drum-pad" id="W">
+        <audio src={clip2} className="clip" id='W'>W</audio>
       </button>
-      <button
-        className="drum-pad"
-        id="W"
-        onClick={handlePlay}
-        value="cinematic-alien-thunder-transition"
-      >
-        W
+      <button className="drum-pad" id="E">
+        <audio src={clip3} className='clip' id='E'>E</audio>
       </button>
-      <button
-        className="drum-pad"
-        id="E"
-        onClick={handlePlay}
-        value="cinematic-impact-thunder"
-      >
-        E
-      </button>
-      <button
-        className="drum-pad"
-        id="A"
-        onClick={handlePlay}
-        value="cinematic-laser-gun-thunder"
-      >
+      <button className="drum-pad" id="A">
         A
       </button>
-      <button
-        className="drum-pad"
-        id="S"
-        onClick={handlePlay}
-        value="cinematic-thunder"
-      >
+      <button className="drum-pad" id="S">
         S
       </button>
-      <button
-        className="drum-pad"
-        id="D"
-        onClick={handlePlay}
-        value="cinematic-transition-thunder"
-      >
+      <button className="drum-pad" id="D">
         D
       </button>
-      <button
-        className="drum-pad"
-        id="Z"
-        onClick={handlePlay}
-        value="light-rain-with-thunderstorm"
-      >
+      <button className="drum-pad" id="Z">
         Z
       </button>
-      <button
-        className="drum-pad"
-        id="X"
-        onClick={handlePlay}
-        value="thunder-in-bad-weather"
-      >X</button>
-      <button
-        className="drum-pad"
-        id="C"
-        onClick={handlePlay}
-        value="thunderstorm-ambience"
-      >
+      <button className="drum-pad" id="X">
+        X
+      </button>
+      <button className="drum-pad" id="C">
         C
       </button>
     </div>

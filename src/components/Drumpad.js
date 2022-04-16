@@ -12,44 +12,174 @@ import clip8 from "../Media/thunder-in-bad-weather.wav";
 import clip9 from "../Media/thunderstorm-ambience.wav";
 
 const Drumpad = ({ setDisplayname }) => {
-  const sound = useRef(null); 
+  const sound1 = useRef(null);
+  const sound2 = useRef(null);
+  const sound3 = useRef(null);
+  const sound4 = useRef(null);
+  const sound5 = useRef(null);
+  const sound6 = useRef(null);
+  const sound7 = useRef(null);
+  const sound8 = useRef(null);
+  const sound9 = useRef(null);
 
-  const play = ()=>{
-    sound.current.currentTime=0;
-    sound.current.play();
-  }
+  const play1 = (e) => {
+    sound1.current.currentTime = 0;
+    sound1.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play2 = (e) => {
+    sound2.current.currentTime = 0;
+    sound2.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play3 = (e) => {
+    sound3.current.currentTime = 0;
+    sound3.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play4 = (e) => {
+    sound4.current.currentTime = 0;
+    sound4.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play5 = (e) => {
+    sound5.current.currentTime = 0;
+    sound5.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play6 = (e) => {
+    sound6.current.currentTime = 0;
+    sound6.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play7 = (e) => {
+    sound7.current.currentTime = 0;
+    sound7.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play8 = (e) => {
+    sound8.current.currentTime = 0;
+    sound8.current.play();
+    setDisplayname(e.target.name);
+  };
+  const play9 = (e) => {
+    sound9.current.currentTime = 0;
+    sound9.current.play();
+    setDisplayname(e.target.name);
+  };
+
+  setTimeout(() => {
+    setDisplayname("");
+  }, 10000);
+
+  // const handleKeypress = (e) => {
+  //   //it triggers by pressing q key
+
+  //   play1();
+
+  //   console.log("Test Me");
+  // };
 
   return (
     <div className={styles.drumpad}>
       <>
-        <audio src={clip1} ref={sound} id='Q'></audio>
-        <button onClick={play}>Q</button>
+        <button
+          onClick={play1}
+          name="big thunder with rain"
+          className="drum-pad"
+          id="Q"
+          // onKeyPress={handleKeypress}
+        >
+          <audio
+            // onKeyPress={handleKeypress}
+            src={clip1}
+            ref={sound1}
+            id="Q"
+            className="clip"
+          ></audio>
+          Q
+        </button>
       </>
-     
-      <button className="drum-pad" id="W">
-        <audio src={clip2} className="clip" id='W'>W</audio>
-      </button>
-      <button className="drum-pad" id="E">
-        <audio src={clip3} className='clip' id='E'>E</audio>
-      </button>
-      <button className="drum-pad" id="A">
-        A
-      </button>
-      <button className="drum-pad" id="S">
-        S
-      </button>
-      <button className="drum-pad" id="D">
-        D
-      </button>
-      <button className="drum-pad" id="Z">
-        Z
-      </button>
-      <button className="drum-pad" id="X">
-        X
-      </button>
-      <button className="drum-pad" id="C">
-        C
-      </button>
+      <>
+        <button
+          onClick={play2}
+          name="cinematic alien thuder transition"
+          className="drum-pad"
+          id="W"
+        >
+          <audio src={clip2} ref={sound2} id="W" className="clip"></audio>W
+        </button>
+      </>
+      <>
+        <button
+          onClick={play3}
+          name="cinematic impact thunder"
+          className="drum-pad"
+          id="E"
+        >
+          <audio src={clip3} ref={sound3} id="E" className="clip"></audio>E
+        </button>
+      </>
+      <>
+        <button
+          onClick={play4}
+          name="cinematic laser gun thunder"
+          className="drum-pad"
+          id="A"
+        >
+          <audio src={clip4} ref={sound4} id="A" className="clip"></audio>A
+        </button>
+      </>
+      <>
+        <button
+          onClick={play5}
+          name="cinematic thunder"
+          className="drum-pad"
+          id="S"
+        >
+          <audio src={clip5} ref={sound5} id="S" className="clip"></audio>S
+        </button>
+      </>
+      <>
+        <button
+          onClick={play6}
+          name="cinematic transition thunder"
+          className="drum-pad"
+          id="D"
+        >
+          <audio src={clip6} ref={sound6} id="D" className="clip"></audio>D
+        </button>
+      </>
+      <>
+        <button
+          onClick={play7}
+          name="light rain with thunderstorm"
+          className="drum-pad"
+          id="Z"
+        >
+          <audio src={clip7} ref={sound7} id="Z" className="clip"></audio>Z
+        </button>
+      </>
+      <>
+        <button
+          onClick={play8}
+          name="thunder in bad weather"
+          className="drum-pad"
+          id="X"
+        >
+          <audio src={clip8} ref={sound8} id="X" className="clip"></audio>X
+        </button>
+      </>
+      <>
+        <button
+          onClick={play9}
+          name="thunderstorm ambience"
+          className="drum-pad"
+          id="C"
+        >
+          <audio src={clip9} ref={sound9} id="C" className="clip"></audio>C
+        </button>
+      </>
     </div>
   );
 };

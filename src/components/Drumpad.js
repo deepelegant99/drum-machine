@@ -72,14 +72,6 @@ const Drumpad = ({ setDisplayname }) => {
     setDisplayname("");
   }, 10000);
 
-  // const handleKeypress = (e) => {
-  //   //it triggers by pressing q key
-
-  //   play1();
-
-  //   console.log("Test Me");
-  // };
-
   return (
     <div className={styles.drumpad}>
       <>
@@ -88,14 +80,14 @@ const Drumpad = ({ setDisplayname }) => {
           name="big thunder with rain"
           className="drum-pad"
           id="Q"
-          // onKeyPress={handleKeypress}
+          type="button"
         >
           <audio
-            // onKeyPress={handleKeypress}
             src={clip1}
             ref={sound1}
             id="Q"
             className="clip"
+            type="audio/mpeg"
           ></audio>
           Q
         </button>
@@ -106,8 +98,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="cinematic alien thuder transition"
           className="drum-pad"
           id="W"
+          type="button"
         >
-          <audio src={clip2} ref={sound2} id="W" className="clip"></audio>W
+          <audio
+            src={clip2}
+            ref={sound2}
+            id="W"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          W
         </button>
       </>
       <>
@@ -116,8 +116,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="cinematic impact thunder"
           className="drum-pad"
           id="E"
+          type="button"
         >
-          <audio src={clip3} ref={sound3} id="E" className="clip"></audio>E
+          <audio
+            src={clip3}
+            ref={sound3}
+            id="E"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          E
         </button>
       </>
       <>
@@ -126,8 +134,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="cinematic laser gun thunder"
           className="drum-pad"
           id="A"
+          type="button"
         >
-          <audio src={clip4} ref={sound4} id="A" className="clip"></audio>A
+          <audio
+            src={clip4}
+            ref={sound4}
+            id="A"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          A
         </button>
       </>
       <>
@@ -136,8 +152,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="cinematic thunder"
           className="drum-pad"
           id="S"
+          type="button"
         >
-          <audio src={clip5} ref={sound5} id="S" className="clip"></audio>S
+          <audio
+            src={clip5}
+            ref={sound5}
+            id="S"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          S
         </button>
       </>
       <>
@@ -146,8 +170,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="cinematic transition thunder"
           className="drum-pad"
           id="D"
+          type="button"
         >
-          <audio src={clip6} ref={sound6} id="D" className="clip"></audio>D
+          <audio
+            src={clip6}
+            ref={sound6}
+            id="D"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          D
         </button>
       </>
       <>
@@ -156,8 +188,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="light rain with thunderstorm"
           className="drum-pad"
           id="Z"
+          type="button"
         >
-          <audio src={clip7} ref={sound7} id="Z" className="clip"></audio>Z
+          <audio
+            src={clip7}
+            ref={sound7}
+            id="Z"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          Z
         </button>
       </>
       <>
@@ -166,8 +206,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="thunder in bad weather"
           className="drum-pad"
           id="X"
+          type="button"
         >
-          <audio src={clip8} ref={sound8} id="X" className="clip"></audio>X
+          <audio
+            src={clip8}
+            ref={sound8}
+            id="X"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          X
         </button>
       </>
       <>
@@ -176,8 +224,16 @@ const Drumpad = ({ setDisplayname }) => {
           name="thunderstorm ambience"
           className="drum-pad"
           id="C"
+          type="button"
         >
-          <audio src={clip9} ref={sound9} id="C" className="clip"></audio>C
+          <audio
+            src={clip9}
+            ref={sound9}
+            id="C"
+            className="clip"
+            type="audio/mpeg"
+          ></audio>
+          C
         </button>
       </>
     </div>

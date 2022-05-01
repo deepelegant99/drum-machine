@@ -10,7 +10,7 @@ import clip7 from "../Media/light-rain-with-thunderstorm.wav";
 import clip8 from "../Media/thunder-in-bad-weather.wav";
 import clip9 from "../Media/thunderstorm-ambience.wav";
 
-const Drumpad = ({ setDisplayname, play }) => {
+const Drumpad = ({ play }) => {
   return (
     <div className={styles.drumpad}>
       <button key="Q" className="drum-pad" id='q' onClick={() => play("Q")}>

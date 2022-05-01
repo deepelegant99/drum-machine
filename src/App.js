@@ -46,14 +46,45 @@ function App() {
     audio.currentTime = 0;
     audio.play();
 
-    setDisplayname(key);
+    switch (key) {
+      case "Q":
+        setDisplayname("Big Thunder with Rain");
+        break;
+      case "W":
+        setDisplayname("Cinematic Alien thunder transition");
+        break;
+      case "E":
+        setDisplayname("Cinematic impact thunder");
+        break;
+      case "A":
+        setDisplayname("Cinematic laser gun thunder");
+        break;
+      case "S":
+        setDisplayname("Cinematic thunder");
+        break;
+      case "D":
+        setDisplayname("Cinematic transition thunder");
+        break;
+      case "Z":
+        setDisplayname("Light Rain with thunderstorm");
+        break;
+      case "X":
+        setDisplayname("Thunder in bad weather");
+        break;
+      case "C":
+        setDisplayname("Thunderstorm Ambience");
+        break;
+      default:
+        setDisplayname("");
+    }
+
     setTimeout(() => {
       setDisplayname("");
     }, 5000);
   };
   return (
     <div className={styles.App} id="drum-machine">
-      <Drumpad setDisplayname={setDisplayname} play={play} />
+      <Drumpad play={play} />
       <Display displayname={displayname} />
     </div>
   );
